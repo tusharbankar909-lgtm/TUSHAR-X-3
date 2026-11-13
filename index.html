@@ -1695,7 +1695,7 @@ const Admin = {
   },
   delKey(i){ const k = store.get("keys",[]); k.splice(i,1); store.set("keys",k); this.render(); },
   mode(m){ store.set("force", m); $("genOut").textContent = "✅ Engine override: " + m; },
-  maint(on){ store.set("maint", on); applyAdmin(); $("genOut").textContent = on?"🔧 Maintenance ON":"✅ Maintenance OFF"; },
+  maint(on){ store.set("maint", on); applyAdmin(); $("genOut").textContent = off?"🔧 Maintenance ON":"✅ Maintenance OFF"; },
   ann(type){
     const t = $("annInput").value.trim();
     if(!t){ toast("Text enter karein!", "#ff5570"); return; }
